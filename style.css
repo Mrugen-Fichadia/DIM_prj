@@ -1,31 +1,24 @@
-$color: aqua;
-
-div>div {
-    border: 1px solid grey;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-color: $color;
+.bkg{
+    background-color: #75a488;
 }
 
-@for $i from 20 through 100 {
-    @if $i % 10==0 {
-        $percentage: $i*1%;
-
-        .darken-#{$i} {
-            background-color: darken($color, $percentage);
-        }
-
-        .lighten-#{$i} {
-            background-color: lighten($color, $percentage);
-        }
-
-        .mix-black-#{$i} {
-            background-color: mix(black, $color, $percentage);
-        }
-
-        .mix-white-#{$i} {
-            background-color: mix(white, $color, $percentage);
-        }
-    }
+.login_h{
+    height: 100vh;
+}
+.lw{
+    width: 350px;
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+.cont{
+    flex-direction: column;
+}
+.login_btn{
+    width: 350px;
+    height: 40px;
+    background-color: black;
 }

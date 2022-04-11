@@ -1,6 +1,6 @@
 /*for login start page*/
 .bkg{
-    background-color: #75a488;
+    background-color: rgb(117, 164, 136);
 }
 
 .login_h{
@@ -9,13 +9,12 @@
 .lw{
     width: 350px;
 }
-::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
+.login::placeholder {
     color: white;
     opacity: 1;
     font-size: large;
-    /* Firefox */
 }
+
 .cont{
     flex-direction: column;
 }
@@ -26,3 +25,52 @@
 }
 
 /*for login end page*/
+
+/*for Feed start page*/
+.bkg1{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(117, 164, 136, 1) 100%);
+    height: 100vh;
+}
+.cont1 {
+    flex-direction: column;
+    margin-left: 220px;
+}
+.cont11 {
+    flex-direction: column;
+    margin-left: 100px;
+}
+.feed_icon{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 1rem;
+}
+.change::placeholder {
+    color: white;
+    font-size: large;
+}
+.srch{
+    border-radius:10px;
+}
+.mag{
+    color: white;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.filter{
+    margin-top: 30px;
+    margin-left: 325px;
+}
+.feed_rec {
+    width: 500px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 1rem;
+    padding: 25px;
+}
+.rec_pic{
+    border-radius: 15px;
+    margin-right: 50px;
+}

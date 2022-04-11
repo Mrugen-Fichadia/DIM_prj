@@ -1,3 +1,4 @@
+/*for login start page*/
 .bkg{
     background-color: #75a488;
 }
@@ -12,6 +13,7 @@
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1;
+    font-size: large;
     /* Firefox */
 }
 .cont{
@@ -22,3 +24,5 @@
     height: 40px;
     background-color: black;
 }
+
+/*for login end page*/

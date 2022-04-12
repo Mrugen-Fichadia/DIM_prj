@@ -29,7 +29,7 @@
 /*for Feed start page*/
 .bkg1{
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(117, 164, 136, 1) 100%);
+    background: linear-gradient(180deg, #1E1E1E 0%, #75A488 100%);
     height: 100vh;
 }
 .cont1 {
@@ -78,7 +78,31 @@
     width: 130px;
     height: 30px;
     margin-right: 40px;
-    border-radius: 15px;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
+}
+
+/*for feed end page*/
+
+
+/*for Leaderboard start page*/
+
+.bkg2{
+    height: 100vh;
+}
+.leader_nav{
+    z-index: 10;
+}
+
+
+
+
+
+/*for Leaderboard end page*/
+.car{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
 }

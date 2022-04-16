@@ -1,3 +1,94 @@
+#container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.right {
+    width: 50vmax;
+
+}
+
+.left {
+    width: 50vmax;
+    background-color: rgb(86, 171, 143);
+}
+
+.heading {
+    margin-left: 16vmax;
+    color: white;
+    margin-top: 15px;
+    font-family: ubuntu;
+}
+
+.register {
+    display: block;
+    height: 38px;
+
+    margin-top: 28px;
+    margin-left: 70px;
+    font-weight: 500;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid #100f0f;
+
+    color: white;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    font-size: small;
+}
+
+.dd {
+    color: #100f0f;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 30px;
+    margin-left: 120px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+#address {
+    width: 74%;
+}
+
+.login {
+    margin-left: 155px;
+
+}
+
+p {
+    color: aliceblue;
+
+}
+
+a {
+    color: #100f0f;
+}
+
+select {
+    width: 75%;
+}
+
 /*for login start page*/
 .bkg{
     background-color: rgb(117, 164, 136);

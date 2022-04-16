@@ -86,6 +86,15 @@
     justify-content: center;
 }
 
+.feed_prof_btn{
+    background-color: black;
+    border: 0px;
+}
+
+.feed_prof_btn:active {
+    background-color: #F38E5A;
+}
+
 /*for feed end page*/
 
 
@@ -103,9 +112,21 @@
 
 
 /*for Leaderboard end page*/
+
+/*for Home start page*/
+
 .car{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+}
+
+.prof_btn{
+    background-color: #75a488;
+    border-width: 0px;
+}
+
+.prof_btn:active {
+    background-color: #F38E5A;
 }

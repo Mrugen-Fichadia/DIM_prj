@@ -1,5 +1,3 @@
-
-
 /*for login start page*/
 .bkg{
     background-color: rgb(117, 164, 136);
@@ -24,6 +22,9 @@
     width: 350px;
     height: 40px;
     background-color: black;
+}
+.log_img{
+    overflow: hidden;
 }
 
 /*for login end page*/

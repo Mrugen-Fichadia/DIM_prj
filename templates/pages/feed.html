@@ -1,9 +1,9 @@
 {% extends 'navbar.html' %} {% load static %} {% block content %}
 
-<div class="d-flex pt-5">
-    <div class="w-25 h-100 py-5 cont11">
+<div class="bkg1 d-flex pt-5">
+    <div class="w-25 h-100 py-4 cont11">
         <h5 class="text-center text-white">Be the part of the community find out the <span style="color: #75a488;">place</span></h5>
-        <div class="d-flex justify-content-evenly mt-5">
+        <div class="d-flex justify-content-evenly mt-3">
             <div class="feed_icon cont d-flex justify-content-center align-items-center" style="background-color: white;"><i class="fa-solid   fa-location-dot" style="font-size:35px "></i>
                 <span class="mt-2"><b>Near By</b></span>
             </div>
@@ -12,7 +12,7 @@
             <div class="feed_icon cont d-flex justify-content-center align-items-center" style="background-color: white;"><i class="fa-solid fa-location-arrow position-relative me-3" style="font-size:35px"></i><i class="fa-solid fa-plus position-absolute mb-4 ms-4 ps-2" style="font-size:22px"></i> <span class="mt-2"><b>Add Place</b></span>
             </div>
         </div>
-        <div class="d-inline-flex mt-5">
+        <div class="d-inline-flex mt-2">
             <i class="fa-solid fa-magnifying-glass position-absolute mt-4 ms-3 mag"></i>
             <input type="search" name="search" id="search" class="border-0 change my-3 mx-2 ps-5 srch position-relative" style="background-color: rgba(117, 164, 136,0.2); color:black; width: 300px; height: 40px" placeholder="Search Now">
             <i class="mt-3 fa-regular fa-square" style="font-size: 40px; color:white"></i>
@@ -144,6 +144,11 @@
                 handleLocationError(false, infoWindow, map.getCenter());
             }
         });
+
+        const marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+        });
     }
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -155,10 +160,6 @@
         );
         infoWindow.open(map);
     }
-    const marker = new google.maps.Marker({
-        position: pos,
-        map: map,
-    });
 
     window.initMap = initMap;
 </script>

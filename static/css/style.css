@@ -1,7 +1,7 @@
 /* for the navbar starts */
 
 .navbar {
-    background: black;
+    background: transparent;
 }
 
 
@@ -20,12 +20,20 @@
 
 .lw {
     width: 350px;
+    font-size: 1.5rem;
+}
+
+.lw::placeholder {
+    font-size: 1.2rem;
 }
 
 .login::placeholder {
     color: white;
-    opacity: 1;
-    font-size: large;
+}
+
+#email:focus,
+#pword:focus {
+    outline: none;
 }
 
 .cont {
@@ -37,6 +45,10 @@
     height: 40px;
     justify-content: center;
     background-color: black;
+}
+
+.img_div {
+    overflow: hidden;
 }
 
 .hambug {

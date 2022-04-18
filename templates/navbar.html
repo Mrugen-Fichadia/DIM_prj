@@ -18,7 +18,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-    <title>Hunger Management</title>
+    <title>Hunger Management {% block temp %} {% endblock %}
+    </title>
 </head>
 
 <body>
@@ -76,9 +77,9 @@
                 </div>
             </div>
         </nav>
+        {% block content %} {% endblock %}
     </div>
 
-    {% block content %} {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 
 </body>

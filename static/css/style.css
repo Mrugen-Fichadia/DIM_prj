@@ -1,0 +1,188 @@
+/* for the navbar starts */
+
+.navbar {
+    background: black;
+}
+
+
+/* for the navbar ends */
+
+
+/*for login start page*/
+
+.bkg {
+    background-color: rgb(117, 164, 136);
+}
+
+.login_h {
+    height: 100vh;
+}
+
+.lw {
+    width: 350px;
+}
+
+.login::placeholder {
+    color: white;
+    opacity: 1;
+    font-size: large;
+}
+
+.cont {
+    flex-direction: column;
+}
+
+.login_btn {
+    width: 350px;
+    height: 40px;
+    justify-content: center;
+    background-color: black;
+}
+
+.hambug {
+    /* display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; */
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+ul.top_icon {
+    margin: auto 0px;
+    color: white;
+}
+
+ul.top_icon li {
+    display: inline-block;
+}
+
+ul.top_icon li .login-a {
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0px 0px 0 20px;
+}
+
+ul.top_icon li .signup-a {
+    color: black;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0px 20px 0 10px;
+}
+
+ul.top_icon li:hover .signup-a {
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0px 20px 0 10px;
+}
+
+.button_login {
+    background-color: #f00;
+    padding: 4px 12px;
+    border-radius: 5px;
+}
+
+
+/*for login end page*/
+
+
+/*for Feed start page*/
+
+
+/* Set the size of the div element that contains the map */
+
+
+/* #map {
+    height: 400px;
+    width: 100%;
+} */
+
+.bkg1 {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(117, 164, 136, 1) 100%);
+    height: 100vh;
+}
+
+.cont1 {
+    flex-direction: column;
+    margin-left: 220px;
+}
+
+.cont11 {
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.feed_icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 1rem;
+}
+
+.change::placeholder {
+    color: white;
+    font-size: large;
+}
+
+.srch {
+    border-radius: 10px;
+}
+
+.mag {
+    color: white;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.filter {
+    margin-top: 30px;
+    margin-left: 325px;
+}
+
+.feed_rec {
+    width: 500px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 1rem;
+    padding: 25px;
+}
+
+.rec_pic {
+    border-radius: 15px;
+    margin-right: 50px;
+}
+
+.profile {
+    width: auto;
+    height: 30px;
+    margin: auto 0px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*for Feed end page*/
+
+
+/* for index page start */
+
+.bg-page {
+    background: pink;
+}
+
+.d-flex .car {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    height: fit-content;
+    z-index: -1;
+}
+
+
+/* for index page end */

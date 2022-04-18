@@ -1,0 +1,86 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://kit.fontawesome.com/74bfeb452a.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+    <title>Hunger Management</title>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 z-1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a> {% if path == '/' %}
+                            <hr class="w-100 m-0" style="height:4px; opacity:1;background-color:#F38E5A"> {% endif %}
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Leaderboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'feed' %}">Feed</a>{% if feed_line == 1 %}
+                            <hr class="w-100 m-0" style="height:4px; opacity:1;background-color:#F38E5A"> {% endif %}
+
+                        </li>
+
+                    </ul>
+                    <ul class="list-group" style="list-style-type: none;">
+                        {% if user.is_authenticated %}
+
+                        <button class="d-flex profile hambug_00" style="background-color: #ADFF45E5;" type="submit ">
+                                <i class="fa-regular fa-user me-2 "></i>
+                    <a href="login" class="text-decoration-none">
+                        <li>
+                            Welcome, {{user.first_name}} &nbsp; &nbsp;
+                        </li>
+
+                        <li>
+                            <a href="logout" class="text-decoration-none">Logout</a>
+                        </li>
+                    </a>{% else %}
+                            </button>
+                        <ul>
+                            <button class="d-flex profile hambug_00 " style="background-color: #ADFF45E5; " type="submit ">
+                                <i class="fa-regular fa-user me-2 "></i><a style="text-decoration: none; " href="{% url 'loginpage' %} ">Login / Signup</a>{% endif %}
+                            </button>
+                        </ul>
+                    </ul>
+
+
+
+                    <!-- <button class="d-flex profile " style="background-color: #ADFF45E5; " type="submit ">
+                        <i class="fa-regular fa-user me-2 "></i><a style="text-decoration: none; " href="{% url 'loginpage' %} ">My Profile</a>
+                    </button> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    {% block content %} {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

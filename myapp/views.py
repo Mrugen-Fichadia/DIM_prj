@@ -2,6 +2,7 @@ from importlib.resources import path
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from .models import profile
 # Create your views here.
 
 
@@ -25,8 +26,8 @@ def register(request):
 
     if request.method == 'POST':
 
-        first_name = request.POST['name1']
-        last_name = request.POST['name2']
+        name1 = request.POST['name1']
+        name2 = request.POST['name2']
         age = request.POST['age']
         pnumber = request.POST['pnumber']
         address = request.POST['address']
@@ -35,8 +36,7 @@ def register(request):
         password = request.POST['password']
         password2 = request.POST['password2']
 
-        user = User.objects.create_user(
-            email=email, username=email, password=password2, first_name=first_name, last_name=last_name)
+        user = profile(email=email, password=password2, first_name=name1, last_name=name2,age=age)
         user.save()
         print("User Created")
         return redirect('/')

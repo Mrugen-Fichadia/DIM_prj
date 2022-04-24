@@ -1,13 +1,32 @@
+
 from importlib.resources import path
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import profile
 # Create your views here.
-
+flag = 0
 
 def index(request):
-    return render(request, 'index.html')
+    print("you are entered into INDEX")
+    print("flag is: ",flag)
+    print("Value of username is: ",request.user.username)
+    
+    if (not (request.user.username)):
+        print("NO bro")
+        return render(request, 'index.html')
+
+    # if (request.user.username is not None):
+    if (request.user.username):
+        print("1/2 YES bro")
+        profiles = profile.objects.get(email=request.user.username)
+        context = {'profile': profiles}
+        print("YES bro")
+        return render(request, 'index.html',context)
+    else:
+        return render(request, 'index.html')
+    # return render(request, 'index.html')
+
 
 
 def feed(request):
@@ -38,12 +57,14 @@ def register(request):
 
         user = profile(email=email, password=password2, first_name=name1, last_name=name2,age=age)
         user.save()
+        new_user = User.objects.create_user(username = email, password = password, email = email)
+        new_user.save()
+
         print("User Created")
         return redirect('/')
 
     else:
         return render(request, 'signuppage.html')
-
 
 def login(request):
     if request.method == 'POST':
@@ -54,7 +75,9 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            flag = 1
+            print("flag at login is: ",flag)
+            return redirect('/',flag = 1)
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('login')
@@ -62,10 +85,14 @@ def login(request):
         messages.info(request, "What are you doing!!!")
         return render(request, 'loginpage.html')
 
-
 def logout(request):
     auth.logout(request)
+    flag = 0
+    request.user.username = None
+    print("username is: ",request.user.username)
+    print("flag is: ",flag)
     return redirect('/')
+    # return render(request, 'index.html')
 
 
 def default_map(request):

@@ -1,13 +1,3 @@
-/* for the navbar starts */
-
-.navbar {
-    background: transparent;
-}
-
-
-/* for the navbar ends */
-
-
 /*for login start page*/
 
 .bkg {
@@ -20,20 +10,12 @@
 
 .lw {
     width: 350px;
-    font-size: 1.5rem;
-}
-
-.lw::placeholder {
-    font-size: 1.2rem;
 }
 
 .login::placeholder {
     color: white;
-}
-
-#email:focus,
-#pword:focus {
-    outline: none;
+    opacity: 1;
+    font-size: large;
 }
 
 .cont {
@@ -43,57 +25,11 @@
 .login_btn {
     width: 350px;
     height: 40px;
-    justify-content: center;
     background-color: black;
 }
 
-.img_div {
+.log_img {
     overflow: hidden;
-}
-
-.hambug {
-    /* display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap; */
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-ul.top_icon {
-    margin: auto 0px;
-    color: white;
-}
-
-ul.top_icon li {
-    display: inline-block;
-}
-
-ul.top_icon li .login-a {
-    color: #fff;
-    font-size: 17px;
-    line-height: 20px;
-    padding: 0px 0px 0 20px;
-}
-
-ul.top_icon li .signup-a {
-    color: black;
-    font-size: 17px;
-    line-height: 20px;
-    padding: 0px 20px 0 10px;
-}
-
-ul.top_icon li:hover .signup-a {
-    color: #fff;
-    font-size: 17px;
-    line-height: 20px;
-    padding: 0px 20px 0 10px;
-}
-
-.button_login {
-    background-color: #f00;
-    padding: 4px 12px;
-    border-radius: 5px;
 }
 
 
@@ -102,18 +38,9 @@ ul.top_icon li:hover .signup-a {
 
 /*for Feed start page*/
 
-
-/* Set the size of the div element that contains the map */
-
-
-/* #map {
-    height: 400px;
-    width: 100%;
-} */
-
 .bkg1 {
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(117, 164, 136, 1) 100%);
+    background: linear-gradient(180deg, #1E1E1E 0%, #75A488 100%);
     height: 100vh;
 }
 
@@ -171,30 +98,77 @@ ul.top_icon li:hover .signup-a {
 .profile {
     width: auto;
     height: 30px;
-    margin: auto 0px;
-    border-radius: 15px;
+    margin-right: 40px;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
 }
 
-
-/*for Feed end page*/
-
-
-/* for index page start */
-
-.bg-page {
-    background: pink;
+.feed_prof_btn {
+    background-color: black;
+    border: 0px;
 }
 
-.d-flex .car {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    max-width: 100%;
-    height: fit-content;
+.feed_prof_btn:active {
+    background-color: #F38E5A;
+}
+
+
+/*for feed end page*/
+
+
+/*for Leaderboard start page*/
+
+.bkg2 {
+    height: 100vh;
+}
+
+.leader_nav {
+    z-index: 10;
+}
+
+
+/*for Leaderboard end page*/
+
+
+/*for Home start page*/
+
+.car {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     z-index: -1;
 }
 
+.carou {
+    background-color: #75A488;
+    border-radius: 10px;
+}
 
-/* for index page end */
+.home_img {
+    z-index: -5;
+}
+
+.car_div {
+    z-index: 5;
+    height: 35%;
+}
+
+.car_head {
+    align-items: center;
+    height: 60%;
+    color: white;
+}
+
+.caro_btn {
+    height: 35%;
+}
+
+.prof_btn {
+    background-color: #75a488;
+    border-width: 0px;
+}
+
+.prof_btn:active {
+    background-color: #F38E5A;
+}

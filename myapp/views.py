@@ -1,36 +1,45 @@
 
-from importlib.resources import path
+from multiprocessing import context
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import profile
 # Create your views here.
 flag = 0
-
 def index(request):
-    print("you are entered into INDEX")
-    print("flag is: ",flag)
-    print("Value of username is: ",request.user.username)
+    # print("you are entered into INDEX")
+    # print("flag is: ",flag)
+    # print("Value of username is: ",request.User.username)
     
     if (not (request.user.username)):
-        print("NO bro")
+        # print("NO bro")
         return render(request, 'index.html')
 
     # if (request.user.username is not None):
     if (request.user.username):
-        print("1/2 YES bro")
-        profiles = profile.objects.get(email=request.user.username)
+        # print("1/2 YES bro")
+        profiles = profile.objects.get(Email=request.user.username)
         context = {'profile': profiles}
-        print("YES bro")
+        # print("YES bro")
         return render(request, 'index.html',context)
     else:
         return render(request, 'index.html')
-    # return render(request, 'index.html')
-
-
+    # # return render(request, 'index.html')
 
 def feed(request):
     return render(request, 'pages/feed.html')
+
+def profilepage(request):
+        if (not (request.user.username)):
+            return render(request, 'pages/profile.html')
+        if (request.user.username):
+            profiles = profile.objects.get(Email=request.user.username)
+            context = {'profile': profiles}
+            return render(request, 'pages/profile.html',context)
+        else:
+            return render(request, 'pages/profile.html')
+
+    
 
 
 def loginpage(request):
@@ -55,10 +64,10 @@ def register(request):
         password = request.POST['password']
         password2 = request.POST['password2']
 
-        user = profile(email=email, password=password2, first_name=name1, last_name=name2,age=age)
+        user = User.objects.create_user(username = email, password = password2, email = email)
         user.save()
-        new_user = User.objects.create_user(username = email, password = password, email = email)
-        new_user.save()
+        user_model = profile(First_name=name1, Last_name=name2, Age=age , Email= email ,Contact_no=pnumber, Password=password2).save()
+        print("Before User Created")
 
         print("User Created")
         return redirect('/')
@@ -76,8 +85,8 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             flag = 1
-            print("flag at login is: ",flag)
-            return redirect('/',flag = 1)
+            # print("flag at login is: ",flag)
+            return redirect('/')
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('login')
